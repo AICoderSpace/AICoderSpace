@@ -82,10 +82,10 @@
     </a>
 
     <ul class="nav-links">
-      <li><a onclick="scrollTo('tiptap')" tabindex="0"><span data-en>TipTap</span><span data-zh>TipTap</span></a></li>
-      <li><a onclick="scrollTo('screenshots')" tabindex="0"><span data-en>Screenshots</span><span data-zh>截图</span></a></li>
-      <li><a onclick="scrollTo('features')" tabindex="0"><span data-en>Features</span><span data-zh>功能</span></a></li>
-      <li><a onclick="scrollTo('philosophy')" tabindex="0"><span data-en>Philosophy</span><span data-zh>理念</span></a></li>
+      <li><a onclick="scrollToSection('tiptap')" tabindex="0"><span data-en>TipTap</span><span data-zh>TipTap</span></a></li>
+      <li><a onclick="scrollToSection('screenshots')" tabindex="0"><span data-en>Screenshots</span><span data-zh>截图</span></a></li>
+      <li><a onclick="scrollToSection('features')" tabindex="0"><span data-en>Features</span><span data-zh>功能</span></a></li>
+      <li><a onclick="scrollToSection('philosophy')" tabindex="0"><span data-en>Philosophy</span><span data-zh>理念</span></a></li>
     </ul>
 
     <div class="lang-toggle" role="group" aria-label="Language toggle">
@@ -157,11 +157,11 @@
     <p class="hero-sub" data-zh>一个个人软件空间，专注于打造用于编程、写作与效率提升的轻量 macOS 工具。</p>
 
     <div class="hero-btns">
-      <a href="#tiptap" class="btn-primary" onclick="event.preventDefault();scrollTo('tiptap')">
+      <a href="#tiptap" class="btn-primary" onclick="event.preventDefault();scrollToSection('tiptap')">
         <span data-en>Explore TipTap</span>
         <span data-zh>探索 TipTap</span>
       </a>
-      <a href="#features" class="btn-text" onclick="event.preventDefault();scrollTo('features')">
+      <a href="#features" class="btn-text" onclick="event.preventDefault();scrollToSection('features')">
         <span data-en>Learn more</span>
         <span data-zh>了解更多</span>
       </a>
@@ -193,7 +193,7 @@
         <p data-en>Select any text on your Mac and a popup appears instantly — copy, search, translate, rewrite, summarize, open links, and more. The best tool gets out of your way.</p>
         <p data-zh>在 Mac 上选中任意文字，弹窗立刻出现——复制、搜索、翻译、改写、总结、打开链接，一触即发。最好的工具，是不打扰你的工具。</p>
 
-        <a href="https://github.com/AICoderSpace/AICoderSpace/releases/tag/0.1.0"
+        <a href="https://github.com/AICoderSpace/TipTap/releases/tag/0.1.0"
            target="_blank" rel="noopener noreferrer"
            class="btn-primary">
           <span data-en>⬇ Download for Mac</span>
@@ -393,9 +393,9 @@
       AICoderSpace
     </div>
     <nav class="footer-links" aria-label="Footer navigation">
-      <a onclick="scrollTo('tiptap')">TipTap</a>
-      <a onclick="scrollTo('features')"><span data-en>Features</span><span data-zh>功能</span></a>
-      <a onclick="scrollTo('philosophy')"><span data-en>Philosophy</span><span data-zh>理念</span></a>
+      <a onclick="scrollToSection('tiptap')">TipTap</a>
+      <a onclick="scrollToSection('features')"><span data-en>Features</span><span data-zh>功能</span></a>
+      <a onclick="scrollToSection('philosophy')"><span data-en>Philosophy</span><span data-zh>理念</span></a>
     </nav>
   </div>
   <p class="footer-copy">

@@ -13,7 +13,7 @@ function setLang(lang) {
 })();
 
 /* ── Smooth nav scroll ── */
-function scrollTo(id) {
+function scrollToSection(id) {
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }

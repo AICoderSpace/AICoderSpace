@@ -4,30 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ── SEO ── -->
+  <!-- SEO -->
   <title>TipTap — Select. Tap. Done. | AICoderSpace</title>
   <meta name="description" content="TipTap is a lightweight macOS productivity tool. Select any text and instantly copy, search, translate, rewrite, or open links — without breaking your flow.">
-  <meta name="keywords" content="TipTap, macOS app, PopClip alternative, text selection tool, productivity, menu bar app, Swift">
+  <meta name="keywords" content="TipTap, macOS app, PopClip alternative, text selection tool, productivity, menu bar app, Swift, Left-Click Boost">
   <meta name="author" content="AICoderSpace">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://aicoderspace.com/">
 
-  <!-- ── Open Graph ── -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aicoderspace.com/">
   <meta property="og:title" content="TipTap — Select. Tap. Done.">
   <meta property="og:description" content="A lightweight macOS tool that pops up actions the moment you select text. Copy, search, translate, rewrite — instantly.">
   <meta property="og:image" content="https://aicoderspace.com/images/og-image.png">
   <meta property="og:site_name" content="AICoderSpace">
-  <meta property="og:locale" content="en_US">
 
-  <!-- ── Twitter Card ── -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TipTap — Select. Tap. Done.">
   <meta name="twitter:description" content="A lightweight macOS tool that pops up actions the moment you select text.">
   <meta name="twitter:image" content="https://aicoderspace.com/images/og-image.png">
 
-  <!-- ── Structured Data ── -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,18 +35,10 @@
     "operatingSystem": "macOS",
     "applicationCategory": "UtilitiesApplication",
     "description": "A lightweight macOS productivity tool. Select any text and instantly trigger actions — copy, search, translate, rewrite, open links — without breaking your flow.",
-    "author": {
-      "@type": "Organization",
-      "name": "AICoderSpace",
-      "url": "https://aicoderspace.com"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "downloadUrl": "https://github.com/AICoderSpace/AICoderSpace/releases/tag/0.1.0",
-    "softwareVersion": "0.1.0"
+    "author": { "@type": "Organization", "name": "AICoderSpace", "url": "https://aicoderspace.com" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "downloadUrl": "https://github.com/AICoderSpace/TipTap/releases",
+    "softwareVersion": "0.5.1"
   }
   </script>
 
@@ -55,7 +46,7 @@
 </head>
 <body>
 
-<!-- ── Navigation ── -->
+<!-- Nav -->
 <header>
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="/" class="nav-brand" aria-label="AICoderSpace home">
@@ -80,27 +71,23 @@
       </svg>
       AICoderSpace
     </a>
-
     <ul class="nav-links">
-      <li><a onclick="scrollToSection('tiptap')" tabindex="0"><span data-en>TipTap</span><span data-zh>TipTap</span></a></li>
-      <li><a onclick="scrollToSection('screenshots')" tabindex="0"><span data-en>Screenshots</span><span data-zh>截图</span></a></li>
-      <li><a onclick="scrollToSection('features')" tabindex="0"><span data-en>Features</span><span data-zh>功能</span></a></li>
-      <li><a onclick="scrollToSection('philosophy')" tabindex="0"><span data-en>Philosophy</span><span data-zh>理念</span></a></li>
+      <li><a onclick="scrollToSection('tiptap')"><span data-en>TipTap</span><span data-zh>TipTap</span></a></li>
+      <li><a onclick="scrollToSection('screenshots')"><span data-en>Screenshots</span><span data-zh>截图</span></a></li>
+      <li><a onclick="scrollToSection('features')"><span data-en>Features</span><span data-zh>功能</span></a></li>
+      <li><a onclick="scrollToSection('changelog')"><span data-en>Changelog</span><span data-zh>更新</span></a></li>
     </ul>
-
     <div class="lang-toggle" role="group" aria-label="Language toggle">
-      <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-pressed="true">EN</button>
-      <button class="lang-btn" id="btn-zh" onclick="setLang('zh')" aria-pressed="false">中</button>
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中</button>
     </div>
   </nav>
 </header>
 
-<!-- ── Hero ── -->
+<!-- Hero -->
 <section class="hero" aria-label="Hero">
   <canvas id="star-canvas" aria-hidden="true"></canvas>
   <div class="hero-inner">
-
-    <!-- AICoderSpace logo -->
     <div class="hero-logo" aria-hidden="true">
       <svg width="110" height="110" viewBox="0 0 148 148" fill="none">
         <defs>
@@ -112,14 +99,14 @@
           <filter id="gl2"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
         </defs>
         <circle cx="74" cy="74" r="72" fill="url(#hbg)" stroke="url(#hring)" stroke-width="1.8"/>
-        <line x1="22" y1="36" x2="40" y2="53" stroke="rgba(41,151,255,.3)" stroke-width="1"/>
-        <line x1="40" y1="53" x2="26" y2="70" stroke="rgba(41,151,255,.22)" stroke-width="1"/>
-        <line x1="40" y1="53" x2="55" y2="42" stroke="rgba(41,151,255,.18)" stroke-width="1"/>
+        <line x1="22" y1="36" x2="40" y2="53" stroke="rgba(41,151,255,.28)" stroke-width="1"/>
+        <line x1="40" y1="53" x2="26" y2="70" stroke="rgba(41,151,255,.2)" stroke-width="1"/>
+        <line x1="40" y1="53" x2="55" y2="42" stroke="rgba(41,151,255,.16)" stroke-width="1"/>
         <circle cx="22" cy="36" r="3" fill="#2997ff" opacity=".7"/>
         <circle cx="40" cy="53" r="3.5" fill="#2997ff" opacity=".8"/>
         <circle cx="26" cy="70" r="2.5" fill="#38bdf8" opacity=".55"/>
         <circle cx="55" cy="42" r="2" fill="#bf5af2" opacity=".6"/>
-        <line x1="115" y1="50" x2="100" y2="62" stroke="rgba(191,90,242,.22)" stroke-width="1"/>
+        <line x1="115" y1="50" x2="100" y2="62" stroke="rgba(191,90,242,.2)" stroke-width="1"/>
         <circle cx="115" cy="50" r="2.5" fill="#bf5af2" opacity=".55"/>
         <circle cx="100" cy="62" r="2" fill="#2997ff" opacity=".45"/>
         <path d="M108 26L109.4 30L113 31.5L109.4 33L108 37L106.6 33L103 31.5L106.6 30Z" fill="white" opacity=".9"/>
@@ -143,213 +130,252 @@
         <circle cx="126" cy="95" r="4.5" fill="#2997ff" filter="url(#gl)"/>
       </svg>
     </div>
-
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      <span data-en>Personal Dev Space</span>
-      <span data-zh>个人开发者空间</span>
-    </div>
-
+    <div class="hero-badge"><span class="badge-dot"></span><span data-en>Personal Dev Space</span><span data-zh>个人开发者空间</span></div>
     <h1 data-en>AI-powered tools for<br><em>faster everyday work.</em></h1>
     <h1 data-zh>用 AI 打造<br><em>更快的日常工作方式</em></h1>
-
     <p class="hero-sub" data-en>A personal software space featuring lightweight macOS tools for coding, writing, and productivity.</p>
-    <p class="hero-sub" data-zh>一个个人软件空间，专注于打造用于编程、写作与效率提升的轻量 macOS 工具。</p>
-
+    <p class="hero-sub" data-zh>一个个人软件空间，专注打造用于编程、写作与效率提升的轻量 macOS 工具。</p>
     <div class="hero-btns">
       <a href="#tiptap" class="btn-primary" onclick="event.preventDefault();scrollToSection('tiptap')">
-        <span data-en>Explore TipTap</span>
-        <span data-zh>探索 TipTap</span>
+        <span data-en>Explore TipTap</span><span data-zh>探索 TipTap</span>
       </a>
       <a href="#features" class="btn-text" onclick="event.preventDefault();scrollToSection('features')">
-        <span data-en>Learn more</span>
-        <span data-zh>了解更多</span>
+        <span data-en>Learn more</span><span data-zh>了解更多</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ── TipTap Product Intro ── -->
+<!-- TipTap Product -->
 <section class="section section-light" id="tiptap" aria-labelledby="tiptap-heading">
   <div class="container">
     <div class="product-intro" data-reveal>
       <div class="pi-left">
-        <p class="eyebrow" data-en>macOS App · v0.1.0</p>
-        <p class="eyebrow" data-zh>macOS 应用 · v0.1.0</p>
+        <p class="eyebrow" data-en>macOS App</p>
+        <p class="eyebrow" data-zh>macOS 应用</p>
 
         <div class="app-icon">
-          <img src="images/TipTapIcon.png" alt="TipTap App Icon" width="64" height="64">
+          <img src="images/TipTapIcon.png" alt="TipTap App Icon" width="72" height="72">
           <div class="app-meta">
             <strong>TipTap</strong>
-            <span data-en>Select. Tap. Done.</span>
-            <span data-zh>选中。点击。完成。</span>
+            <span>Select. Tap. Done.</span>
           </div>
+        </div>
+
+        <div class="version-badge">
+          <span>✦ v0.5.1 — Latest</span>
         </div>
 
         <h2 id="tiptap-heading">TipTap</h2>
         <p class="tagline" data-en>Select. Tap. Done.</p>
-        <p class="tagline" data-zh>选中。点击。完成。</p>
+        <p class="tagline" data-zh>选中即用</p>
 
-        <p data-en>Select any text on your Mac and a popup appears instantly — copy, search, translate, rewrite, summarize, open links, and more. The best tool gets out of your way.</p>
-        <p data-zh>在 Mac 上选中任意文字，弹窗立刻出现——复制、搜索、翻译、改写、总结、打开链接，一触即发。最好的工具，是不打扰你的工具。</p>
+        <p data-en>Select any text on your Mac and a popup appears instantly — copy, search, translate, open links, look up in the dictionary, and more. Smart enough to show only what makes sense: Cut hides in read-only text, Translate hides on URLs and paths.</p>
+        <p data-zh>在 Mac 上选中任意文字，弹窗立刻出现——复制、搜索、翻译、打开链接、系统字典查词，一触即发。足够聪明：只读内容不显示剪切，URL 和路径不显示翻译。</p>
 
-        <a href="https://github.com/AICoderSpace/TipTap/releases/tag/0.1.0"
-           target="_blank" rel="noopener noreferrer"
-           class="btn-primary">
-          <span data-en>⬇ Download for Mac</span>
-          <span data-zh>⬇ 下载 Mac 版</span>
+        <a href="https://github.com/AICoderSpace/TipTap/releases"
+           target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <span data-en>⬇ Download for Mac — Free</span>
+          <span data-zh>⬇ 免费下载 Mac 版</span>
         </a>
       </div>
 
       <div class="pi-right">
         <img src="images/screenshot-actions.png"
-             alt="TipTap Actions settings panel showing Copy, Paste, Cut, Open Link, Search and other actions"
-             width="480" style="width:100%;max-width:480px;border-radius:14px;box-shadow:0 32px 80px rgba(0,0,0,.18);">
+             alt="TipTap Actions settings panel"
+             width="480"
+             style="width:100%;max-width:480px;border-radius:14px;box-shadow:0 32px 80px rgba(0,0,0,.15);">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── Screenshots ── -->
+<!-- Screenshots -->
 <section class="section section-dark" id="screenshots" aria-labelledby="screenshots-heading">
   <div class="container-wide">
     <p class="section-eyebrow" data-en>Screenshots</p>
     <p class="section-eyebrow" data-zh>应用截图</p>
-    <h2 class="section-title" id="screenshots-heading" data-en>Everything under control.</h2>
-    <h2 class="section-title" data-zh>一切尽在掌控。</h2>
-    <p class="section-sub" data-en>Customize actions, appearance, and excluded apps — all from a clean native settings panel.</p>
-    <p class="section-sub" data-zh>在简洁的原生设置面板中，自定义操作、外观与排除 App，随心所欲。</p>
+    <h2 class="section-title" id="screenshots-heading" data-en>Clean. Native. Yours.</h2>
+    <h2 class="section-title" data-zh>简洁、原生、专属于你</h2>
+    <p class="section-sub" data-en>Customize every action, appearance, and excluded app from a clean native settings panel.</p>
+    <p class="section-sub" data-zh>在简洁的原生设置面板中，自定义每个操作、外观与排除列表。</p>
 
     <div class="screenshots-grid">
       <figure class="screenshot-item" data-reveal>
         <img src="images/screenshot-actions.png"
-             alt="TipTap Actions settings — toggle Copy, Paste, Cut, Open Link, Search, Show in Finder and more"
+             alt="TipTap Actions settings — toggle Copy, Cut, Search, Open Link, Dictionary and more"
              loading="lazy">
         <figcaption class="screenshot-caption">
-          <span data-en>Actions</span><span data-zh>操作设置</span>
+          <span data-en>Actions — toggle each action on/off</span>
+          <span data-zh>操作设置 — 按需开关每个动作</span>
         </figcaption>
       </figure>
-
-      <figure class="screenshot-item" data-reveal style="transition-delay:.12s">
+      <figure class="screenshot-item" data-reveal style="transition-delay:.1s">
         <img src="images/screenshot-general.png"
-             alt="TipTap General settings — popup style, layout, theme, search engine, and keyboard shortcut"
+             alt="TipTap General settings — popup style, layout, theme, search engine, keyboard shortcut"
              loading="lazy">
         <figcaption class="screenshot-caption">
-          <span data-en>General</span><span data-zh>通用设置</span>
+          <span data-en>General — popup style, layout, theme</span>
+          <span data-zh>通用设置 — 样式、布局、主题</span>
         </figcaption>
       </figure>
-
-      <figure class="screenshot-item" data-reveal style="transition-delay:.24s">
+      <figure class="screenshot-item" data-reveal style="transition-delay:.2s">
         <img src="images/screenshot-exclusions.png"
-             alt="TipTap Exclusions settings — add apps to ignore list so TipTap stays hidden in those apps"
+             alt="TipTap Exclusions — add apps to ignore list"
              loading="lazy">
         <figcaption class="screenshot-caption">
-          <span data-en>Exclusions</span><span data-zh>排除列表</span>
+          <span data-en>Exclusions — silence TipTap per-app</span>
+          <span data-zh>排除列表 — 按 App 静默 TipTap</span>
         </figcaption>
       </figure>
+    </div>
+
+    <div class="screenshots-subgroup" data-reveal>
+      <div class="screenshots-divider">
+        <span data-en>Advanced — Mouse Enhancement</span>
+        <span data-zh>高级设置 — 鼠标增强</span>
+      </div>
+      <div class="screenshots-grid">
+        <figure class="screenshot-item">
+          <img src="images/screenshot-advanced-1.png"
+               alt="TipTap Advanced settings — Left-Click Boost and Middle-Click Boost overview"
+               loading="lazy">
+          <figcaption class="screenshot-caption">
+            <span data-en>Overview — master toggles</span>
+            <span data-zh>总览 — 主开关</span>
+          </figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <img src="images/screenshot-advanced-2.png"
+               alt="TipTap Left-Click Boost — ⌥+Click, Short Hold, Long Hold bindings"
+               loading="lazy">
+          <figcaption class="screenshot-caption">
+            <span data-en>Left-Click Boost — three hold tiers</span>
+            <span data-zh>左键加强 — 三档时长配置</span>
+          </figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <img src="images/screenshot-advanced-3.png"
+               alt="TipTap Middle-Click Boost — scroll-wheel click bindings"
+               loading="lazy">
+          <figcaption class="screenshot-caption">
+            <span data-en>Middle-Click Boost — scroll-wheel bindings</span>
+            <span data-zh>中键加强 — 滚轮键绑定</span>
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── Features ── -->
+<!-- Features -->
 <section class="section section-light" id="features" aria-labelledby="features-heading">
   <div class="container">
     <p class="section-eyebrow" data-en>Features</p>
     <p class="section-eyebrow" data-zh>功能</p>
     <h2 class="section-title" id="features-heading" data-en>Everything you need.<br>Nothing you don't.</h2>
     <h2 class="section-title" data-zh>刚好够用，绝不多余。</h2>
-    <p class="section-sub" data-en>Built for real daily use, not demo screenshots.</p>
-    <p class="section-sub" data-zh>为真实日常使用设计，而非产品截图。</p>
+    <p class="section-sub" data-en>Built for real daily use. Every action is context-aware — it shows only when it actually makes sense.</p>
+    <p class="section-sub" data-zh>为真实日常使用设计。每个动作都感知上下文——只在真正合适的时候出现。</p>
+
+    <!-- What's new highlight -->
+    <div class="whats-new" data-reveal>
+      <span class="wn-badge" data-en>New in v0.5</span>
+      <span class="wn-badge" data-zh>v0.5 新增</span>
+      <ul class="wn-list">
+        <li data-en><strong>Left-Click Boost</strong> — hold ⌥ Option and click or long-press to fire custom actions: send a shortcut, open an app, or run a Shortcut workflow. Three hold-duration tiers.</li>
+        <li data-en><strong>Middle-Click Boost</strong> — bind the scroll-wheel click to custom actions, with ⌥ Option variants. Off by default.</li>
+        <li data-en><strong>Run Shortcut</strong> — pick from your existing Shortcuts in a dropdown; runs silently in the background, no app window.</li>
+        <li data-zh><strong>左键加强</strong> — 按住 ⌥ Option 单击或长按，触发自定义动作：发送快捷键、打开 App 或运行 Shortcuts。三档时长。</li>
+        <li data-zh><strong>中键加强</strong> — 将滚轮键绑定自定义动作，支持 ⌥ 组合。默认关闭。</li>
+        <li data-zh><strong>运行快捷指令</strong> — 从下拉列表直接选择快捷指令，静默后台运行，不打开 Shortcuts.app。</li>
+      </ul>
+    </div>
 
     <div class="feat-grid" data-reveal>
       <article class="feat-cell">
-        <div class="feat-icon" aria-hidden="true">⚡</div>
-        <h3 data-en>Instant Actions</h3>
-        <h3 data-zh>即时操作</h3>
-        <p data-en>Select text — popup appears. No shortcut to remember, no menu to dig through.</p>
-        <p data-zh>选中文字，弹窗出现。无需记快捷键，无需翻菜单。</p>
+        <div class="feat-icon">⚡</div>
+        <h4 data-en>Instant Actions</h4>
+        <h4 data-zh>即时操作</h4>
+        <p data-en>Select text, popup appears. No shortcut to memorize, no menu to dig through.</p>
+        <p data-zh>选中文字，弹窗即现。无需记快捷键，无需翻菜单。</p>
       </article>
       <article class="feat-cell">
-        <div class="feat-icon" aria-hidden="true">🍎</div>
-        <h3 data-en>Truly Native</h3>
-        <h3 data-zh>真正原生</h3>
-        <p data-en>Built with SwiftPM. Lives in your menu bar. Feels exactly like macOS.</p>
-        <p data-zh>基于 SwiftPM 构建，常驻菜单栏，用起来像系统自带。</p>
+        <div class="feat-icon">🧠</div>
+        <h4 data-en>Context-Aware</h4>
+        <h4 data-zh>感知上下文</h4>
+        <p data-en>Cut hides in read-only text. Translate and Dictionary hide on URLs and file paths. Only relevant actions shown.</p>
+        <p data-zh>只读内容不显示剪切；URL 和路径不显示翻译和查词。只呈现真正有意义的动作。</p>
       </article>
       <article class="feat-cell">
-        <div class="feat-icon" aria-hidden="true">⚙️</div>
-        <h3 data-en>Custom Workflows</h3>
-        <h3 data-zh>自定义工作流</h3>
-        <p data-en>Enable or disable each action. Configure search engine, popup style, and layout.</p>
-        <p data-zh>按需开关每个操作，自定义搜索引擎、弹窗样式与布局。</p>
+        <div class="feat-icon">🖱️</div>
+        <h4 data-en>Mouse Boost</h4>
+        <h4 data-zh>鼠标增强</h4>
+        <p data-en>⌥ + click or scroll-wheel click to fire custom actions — shortcuts, apps, or Shortcut workflows.</p>
+        <p data-zh>⌥+点击或滚轮键触发自定义动作——快捷键、打开 App、运行快捷指令。</p>
       </article>
       <article class="feat-cell">
-        <div class="feat-icon" aria-hidden="true">🪶</div>
-        <h3 data-en>Lightweight</h3>
-        <h3 data-zh>轻量快速</h3>
-        <p data-en>Tiny footprint. Instant popup. Doesn't slow your Mac at all.</p>
-        <p data-zh>极小占用，弹窗即时响应，不拖慢你的 Mac 半分。</p>
+        <div class="feat-icon">🍎</div>
+        <h4 data-en>Truly Native</h4>
+        <h4 data-zh>真正原生</h4>
+        <p data-en>Built with SwiftPM. Lives in your menu bar. Classic macOS inline Look Up popover.</p>
+        <p data-zh>SwiftPM 构建，常驻菜单栏，经典 macOS 内联查词浮窗。</p>
       </article>
       <article class="feat-cell">
-        <div class="feat-icon" aria-hidden="true">🔒</div>
-        <h3 data-en>Privacy First</h3>
-        <h3 data-zh>隐私优先</h3>
-        <p data-en>No data leaves your Mac. No accounts, no telemetry, no cloud sync.</p>
-        <p data-zh>数据不离开设备。无账号、无遥测、无云同步。</p>
+        <div class="feat-icon">🔒</div>
+        <h4 data-en>Privacy First</h4>
+        <h4 data-zh>隐私优先</h4>
+        <p data-en>No data leaves your Mac. No accounts, no telemetry, no cloud. Sensitive apps excluded by default.</p>
+        <p data-zh>数据不离开设备。无账号、无遥测、无云端。敏感 App 默认排除。</p>
       </article>
       <article class="feat-cell">
-        <div class="feat-icon" aria-hidden="true">🚫</div>
-        <h3 data-en>App Exclusions</h3>
-        <h3 data-zh>App 排除列表</h3>
-        <p data-en>Add apps to the ignore list. TipTap stays hidden exactly where you don't need it.</p>
-        <p data-zh>将 App 加入排除列表，TipTap 在不需要的地方自动隐藏。</p>
+        <div class="feat-icon">⚙️</div>
+        <h4 data-en>Fully Configurable</h4>
+        <h4 data-zh>完全可配置</h4>
+        <p data-en>Toggle each action, set popup style, layout, theme, search engine, per-app exclusions, and global shortcut.</p>
+        <p data-zh>按需开关每个动作，设置弹窗样式、布局、主题、搜索引擎、排除列表与全局快捷键。</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ── Philosophy ── -->
+<!-- Philosophy -->
 <section class="section section-gray" id="philosophy" aria-labelledby="philosophy-heading">
   <div class="container" style="max-width:720px">
     <p class="section-eyebrow" data-en>Philosophy</p>
     <p class="section-eyebrow" data-zh>产品理念</p>
     <h2 class="section-title" id="philosophy-heading" data-en>Four beliefs.<br>Every decision.</h2>
     <h2 class="section-title" data-zh>四个信念，每个决策。</h2>
-
     <div class="phil-list" data-reveal>
       <div class="phil-item">
-        <span class="phil-num" aria-hidden="true">01</span>
+        <span class="phil-num">01</span>
         <div>
-          <h3 data-en>Simple</h3>
-          <h3 data-zh>简单</h3>
-          <p data-en>One gesture. Works out of the box. No configuration needed to start using it.</p>
+          <h4 data-en>Simple</h4><h4 data-zh>简单</h4>
+          <p data-en>One gesture. Works out of the box. No configuration needed to start.</p>
           <p data-zh>一个手势，开箱即用，无需任何配置。</p>
         </div>
       </div>
       <div class="phil-item">
-        <span class="phil-num" aria-hidden="true">02</span>
+        <span class="phil-num">02</span>
         <div>
-          <h3 data-en>Fast</h3>
-          <h3 data-zh>快速</h3>
+          <h4 data-en>Fast</h4><h4 data-zh>快速</h4>
           <p data-en>If it adds latency, it doesn't ship. Speed is not a feature — it's the baseline.</p>
           <p data-zh>有延迟，就不发布。速度不是功能，而是底线。</p>
         </div>
       </div>
       <div class="phil-item">
-        <span class="phil-num" aria-hidden="true">03</span>
+        <span class="phil-num">03</span>
         <div>
-          <h3 data-en>Non-disruptive</h3>
-          <h3 data-zh>不打断工作流</h3>
-          <p data-en>Disappears the moment you don't need it. Never breaks your focus or rhythm.</p>
-          <p data-zh>不需要时立刻消失，绝不打断你的专注状态。</p>
+          <h4 data-en>Non-disruptive</h4><h4 data-zh>不打断工作流</h4>
+          <p data-en>Disappears the moment you don't need it. Never breaks your focus.</p>
+          <p data-zh>不需要时立刻消失，绝不打断你的专注。</p>
         </div>
       </div>
       <div class="phil-item">
-        <span class="phil-num" aria-hidden="true">04</span>
+        <span class="phil-num">04</span>
         <div>
-          <h3 data-en>Real-world</h3>
-          <h3 data-zh>为真实使用设计</h3>
-          <p data-en>Designed for actual daily use — not a feature checklist, not a demo video.</p>
+          <h4 data-en>Real-world</h4><h4 data-zh>为真实使用设计</h4>
+          <p data-en>Designed for actual daily use — not a feature list, not a demo video.</p>
           <p data-zh>为日常真实场景设计，而非功能清单或演示视频。</p>
         </div>
       </div>
@@ -357,17 +383,70 @@
   </div>
 </section>
 
-<!-- ── CTA ── -->
+<!-- Changelog -->
+<section class="section section-light" id="changelog" aria-labelledby="changelog-heading">
+  <div class="container" style="max-width:720px">
+    <p class="section-eyebrow" data-en>Changelog</p>
+    <p class="section-eyebrow" data-zh>更新日志</p>
+    <h2 class="section-title" id="changelog-heading" data-en>Release history.</h2>
+    <h2 class="section-title" data-zh>版本历史</h2>
+    <div class="changelog-strip" data-reveal>
+      <div class="cl-item">
+        <span class="cl-ver latest">v0.5.1</span>
+        <span class="cl-date">2026-06-28</span>
+        <span class="cl-desc" data-en>Settings UI rebuilt — cleaner layout, clearer hierarchy, collapsible Mouse Enhancement panels.</span>
+        <span class="cl-desc" data-zh>设置界面重构——更清晰的布局层级，鼠标增强面板默认折叠。</span>
+      </div>
+      <div class="cl-item">
+        <span class="cl-ver">v0.5.0</span>
+        <span class="cl-date">2026-06-28</span>
+        <span class="cl-desc" data-en>Middle-Click Boost — bind scroll-wheel click/long-press to custom actions (⌥ variants supported). Off by default.</span>
+        <span class="cl-desc" data-zh>中键加强——滚轮键单击/长按触发自定义动作，支持 ⌥ 组合，默认关闭。</span>
+      </div>
+      <div class="cl-item">
+        <span class="cl-ver">v0.4.0</span>
+        <span class="cl-date">2026-06-27</span>
+        <span class="cl-desc" data-en>Left-Click Boost upgraded to 3 hold-duration tiers. New "Run Shortcut" action — pick from dropdown, runs silently in background.</span>
+        <span class="cl-desc" data-zh>左键加强升级三档时长，新增「运行快捷指令」动作，下拉选择，后台静默运行。</span>
+      </div>
+      <div class="cl-item">
+        <span class="cl-ver">v0.3.0</span>
+        <span class="cl-date">2026-06-27</span>
+        <span class="cl-desc" data-en>Left-Click Boost — ⌥ + click/long-press fires custom actions. Plain clicks untouched.</span>
+        <span class="cl-desc" data-zh>左键加强——⌥+单击/长按触发自定义动作，普通点击完全不受影响。</span>
+      </div>
+      <div class="cl-item">
+        <span class="cl-ver">v0.2.3</span>
+        <span class="cl-date">2026-06-27</span>
+        <span class="cl-desc" data-en>Removed Paste action — it never belonged in a selection-triggered popup. ⌘V already handles it.</span>
+        <span class="cl-desc" data-zh>移除「粘贴」动作——粘贴作用于光标而非选区，⌘V 本就搞定。</span>
+      </div>
+      <div class="cl-item">
+        <span class="cl-ver">v0.2.2</span>
+        <span class="cl-date">2026-06-27</span>
+        <span class="cl-desc" data-en>Cut now hides in read-only contexts. Translate and Dictionary hide on URLs and file paths.</span>
+        <span class="cl-desc" data-zh>只读内容不显示剪切；URL 和路径不显示翻译与查词。</span>
+      </div>
+      <div class="cl-item">
+        <span class="cl-ver">v0.1.0</span>
+        <span class="cl-date">2026-06-26</span>
+        <span class="cl-desc" data-en>First release — copy, search, translate, dictionary, open link, Finder path, exclusions, bilingual UI.</span>
+        <span class="cl-desc" data-zh>首个版本——复制、搜索、翻译、查词、打开链接、Finder 路径、排除列表、双语界面。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="section section-dark" aria-label="Download call to action">
   <div class="container">
     <div class="cta-banner" data-reveal>
       <h2 data-en>Ready to move faster?</h2>
       <h2 data-zh>准备好提速了吗？</h2>
-      <p data-en>Download TipTap and start saving time with every text selection.</p>
+      <p data-en>Download TipTap and start saving time from every text selection.</p>
       <p data-zh>下载 TipTap，从每一次选中文字开始节省时间。</p>
-      <a href="https://github.com/AICoderSpace/TipTap/releases/tag/0.1.0"
-         target="_blank" rel="noopener noreferrer"
-         class="btn-primary">
+      <a href="https://github.com/AICoderSpace/TipTap/releases"
+         target="_blank" rel="noopener noreferrer" class="btn-primary">
         <span data-en>⬇ Download for Mac — Free</span>
         <span data-zh>⬇ 免费下载 Mac 版</span>
       </a>
@@ -375,7 +454,7 @@
   </div>
 </section>
 
-<!-- ── Footer ── -->
+<!-- Footer -->
 <footer class="footer" role="contentinfo">
   <div class="footer-top">
     <div class="footer-brand">
@@ -395,7 +474,7 @@
     <nav class="footer-links" aria-label="Footer navigation">
       <a onclick="scrollToSection('tiptap')">TipTap</a>
       <a onclick="scrollToSection('features')"><span data-en>Features</span><span data-zh>功能</span></a>
-      <a onclick="scrollToSection('philosophy')"><span data-en>Philosophy</span><span data-zh>理念</span></a>
+      <a onclick="scrollToSection('changelog')"><span data-en>Changelog</span><span data-zh>更新</span></a>
     </nav>
   </div>
   <p class="footer-copy">
